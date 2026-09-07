@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayan Hasan : Civil Engineer</title>
+  <meta name="description" content="Personal engineering portfolio of Ayan Hasan, Civil Engineer specializing in GIS, spatial analysis, infrastructure mapping, traffic engineering, and coastal disaster risk DEM modeling.">
+  <meta name="author" content="Ayan Hasan">
+  <meta name="keywords" content="Ayan Hasan, Civil Engineer, NED University, Urban Engineering, GIS, DEM, QGIS, Infrastructure, Karachi, GeoClaw, Traffic Engineering, PEC Registered Engineer">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Ayan Hasan : Civil Engineer">
+  <meta property="og:description" content="Civil engineering, spatial analysis & infrastructure portfolio of Ayan Hasan (NEDUET, Karachi).">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon / Vector Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23171716'/><rect x='10' y='10' width='80' height='80' fill='none' stroke='%23B4863A' stroke-width='4'/><text x='50' y='62' fill='%23F4EFE6' font-family='sans-serif' font-size='38' font-weight='bold' text-anchor='middle'>AH</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/scroll-art.css">
+</head>
+<body>
+
+  <!-- Persistent Left Side Rail (Desktop) -->
+  <aside class="side-rail" aria-label="Quick Navigation and Actions">
+    <a href="#home" class="rail-logo" aria-label="Ayan Hasan Home">AH</a>
+
+    <div class="rail-actions">
+      <a href="https://www.linkedin.com/in/ayan-hasan" target="_blank" rel="noopener noreferrer" class="rail-btn" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+
+      <a href="mailto:ayanhasan.nn@gmail.com" class="rail-btn js-email-action" aria-label="Email Ayan Hasan (ayanhasan.nn@gmail.com)" title="Email Ayan Hasan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </a>
+
+      <a href="#home" class="rail-btn" aria-label="Back to Top" title="Back to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+      </a>
+    </div>
+
+    <div class="rail-coord">24°48'N 67°03'E</div>
+  </aside>
+
+  <!-- Continuous 2D Technical Scroll Motion Artwork Canvas Layer -->
+  <div class="scroll-art-stage-container" aria-hidden="true">
+    <canvas id="scroll-art-canvas"></canvas>
+  </div>
+
+  <!-- Realtime Surveying Datum HUD Ticker -->
+  <aside class="survey-datum-hud" aria-hidden="true">
+    <span class="hud-stage-name" id="hud-stage-name">01 STRUCTURE</span>
+    <span class="hud-station-code" id="hud-station-code">STA 0+000</span>
+    <div class="hud-bar-track">
+      <div class="hud-bar-fill" id="hud-bar-fill"></div>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+
+    <!-- Sticky Header Navigation (Brand shows ONLY AYAN HASAN) -->
+    <header class="site-header" role="banner">
+      <div class="container nav-container">
+        <a href="#home" class="brand-meta" aria-label="Ayan Hasan Home">
+          <span class="brand-name">AYAN HASAN</span>
+        </a>
+
+        <!-- Nav Menu -->
+        <nav id="site-navigation" aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li><a href="#about" class="nav-link"><span class="nav-num">01</span> About</a></li>
+            <li><a href="#experience" class="nav-link"><span class="nav-num">02</span> Experience</a></li>
+            <li><a href="#projects" class="nav-link"><span class="nav-num">03</span> Projects</a></li>
+            <li><a href="#education" class="nav-link"><span class="nav-num">04</span> Education</a></li>
+            <li><a href="#toolkit" class="nav-link"><span class="nav-num">05</span> Toolkit</a></li>
+            <li><a href="#leadership" class="nav-link"><span class="nav-num">06</span> Leadership</a></li>
+            <li><a href="#contact" class="nav-link"><span class="nav-num">07</span> Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" role="main">
+
+      <!-- ============================================================
+           01 : NEW EDITORIAL COVER LANDING (DEEP CHARCOAL)
+           ============================================================ -->
+      <section id="home" class="hero-editorial section-dark" aria-label="Introduction Cover">
+        <div class="container">
+          <div class="hero-editorial-grid">
+            
+            <!-- Left Column: Oversized Typography & Identity -->
+            <div class="hero-left-col">
+              <div class="hero-meta-label">
+                <span>PEC Registered Engineer (RE)</span>
+              </div>
+
+              <div class="hero-headline-wrap">
+                <h1 class="hero-name-primary">AYAN</h1>
+                <div class="hero-name-secondary">HASAN</div>
+              </div>
+
+              <div class="hero-designation-strip">
+                <span class="hero-designation-text">Civil Engineer</span>
+                <span class="hero-dot-sep">·</span>
+                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-stone-dim);">NEDUET 2025</span>
+              </div>
+              
+              <p class="hero-sub-text">
+                Civil engineering, spatial analysis &amp; infrastructure.
+              </p>
+
+              <div class="hero-actions-group">
+                <a href="#projects" class="btn btn-primary">
+                  View Selected Work
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="#about" class="btn btn-frosted">About Me</a>
+              </div>
+            </div>
+
+            <!-- Right Column: Integrated Editorial Profile Visual -->
+            <div class="hero-right-col">
+              <div class="hero-portrait-composition">
+                <img src="assets/profile/Ayan_proifle_pic.PNG" alt="Ayan Hasan : Civil Engineer" class="hero-portrait-img" width="1086" height="1448">
+                <div class="hero-portrait-stamp">
+                  <span>DATUM: WGS84 / UTM 42N</span>
+                  <span>AH · B.E. CIVIL</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Footer Bar -->
+          <div class="hero-footer-bar">
+            <div class="hero-footer-item">
+              <span style="color: var(--color-ochre);">COORDINATES:</span>
+              <span>24°48'N, 67°03'E (DHA, Karachi)</span>
+            </div>
+            <div class="hero-footer-item">
+              <span style="color: var(--color-ochre);">BEngg:</span>
+              <span>Civil Engineering</span>
+            </div>
+            <div class="hero-footer-item">
+              <span style="color: var(--color-ochre);">SPECIALISATION:</span>
+              <span>Urban &amp; Infrastructure Engineering</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           02 : ABOUT SECTION (WARM EDITORIAL CREAM CANVAS)
+           ============================================================ -->
+      <section id="about" class="section section-cream" aria-label="About Ayan Hasan">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">01 : Profile &amp; Narrative</span>
+            <h2 class="section-title">ABOUT</h2>
+            <span class="section-subtitle">Civil engineering graduate with an analytical &amp; spatial focus</span>
+          </div>
+
+          <div class="about-asymmetric-grid">
+            <!-- Left: Specification Panel -->
+            <div class="about-summary-panel panel-surface">
+              <div class="about-meta-row">
+                <span class="about-meta-label">Primary Discipline</span>
+                <span class="about-meta-val">Civil Engineering</span>
+              </div>
+              <div class="about-meta-row">
+                <span class="about-meta-label">Department</span>
+                <span class="about-meta-val">Urban &amp; Infrastructure Engineering</span>
+              </div>
+              <div class="about-meta-row">
+                <span class="about-meta-label">Degree</span>
+                <span class="about-meta-val">Bachelor of Engineering (B.E.), NEDUET</span>
+              </div>
+              <div class="about-meta-row">
+                <span class="about-meta-label">Registration</span>
+                <span class="about-meta-val">Registered Engineer (RE), PEC</span>
+              </div>
+              <div class="about-meta-row" style="border-bottom: none; padding-bottom: 0;">
+                <span class="about-meta-label">Current Research</span>
+                <span class="about-meta-val">AI Assisted Tsunami Loss Modeling, NEDUET</span>
+              </div>
+            </div>
+
+            <!-- Right: Professional Narrative in Ayan's Personal Narrative Voice -->
+            <div class="about-prose">
+              <p class="about-prose-lead">
+                I am a Civil Engineering graduate from NED University of Engineering &amp; Technology with a specialization in Urban Engineering.
+              </p>
+
+              <p>
+                My practical work centers on GIS based spatial analysis, infrastructure mapping, traffic engineering, field surveying, and disaster risk assessment.
+              </p>
+
+              <p>
+                During my Final Year Design Project, I was primarily responsible for the entire DEM and GIS workflow of a deterministic tsunami risk assessment for Karachi's coastal belt, leading elevation dataset selection, GEBCO bathymetry and SRTM topography integration, GNSS ground survey execution, Ground Control Point validation, DEM processing in QGIS, and spatial risk mapping.
+              </p>
+
+              <p>
+                Alongside field based traffic engineering and urban infrastructure audits through NED University, I am currently contributing to research on AI based economic loss modelling for tsunami scenarios at Karachi Port.
+              </p>
+
+              <p>
+                My longer term professional trajectory is focused on building expertise in construction management and project planning, Insha’Allah.
+              </p>
+
+              <!-- Areas of Professional Interest (Typographic List) -->
+              <div class="interests-container">
+                <h3 class="interests-title">Areas of Professional Interest</h3>
+                <ul class="interests-tag-cloud">
+                  <li class="interest-chip">Construction Management</li>
+                  <li class="interest-chip">Project Planning</li>
+                  <li class="interest-chip">Infrastructure</li>
+                  <li class="interest-chip">GIS &amp; Spatial Analysis</li>
+                  <li class="interest-chip">Transportation</li>
+                  <li class="interest-chip">Disaster Risk</li>
+                  <li class="interest-chip">Urban Systems</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           03 : EXPERIENCE SECTION (DEEP CHARCOAL CANVAS)
+           ============================================================ -->
+      <section id="experience" class="section section-dark" aria-label="Professional Experience">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">02 : Engineering Timeline</span>
+            <h2 class="section-title">EXPERIENCE</h2>
+            <span class="section-subtitle">Research collaboration, field traffic surveys &amp; spatial data analysis</span>
+          </div>
+
+          <div class="experience-timeline-track">
+            <!-- Role 01 (Research Assistant Role) -->
+            <article class="timeline-card-entry">
+              <div class="timeline-date-col">
+                <span>July 2026 Present</span>
+              </div>
+              <div class="timeline-body-col">
+                <div>
+                  <h3 class="timeline-role-title">Research Assistant</h3>
+                  <div class="timeline-org-name">NED University of Engineering &amp; Technology</div>
+                </div>
+                <p class="timeline-lead-desc">
+                  Contributing to an AI assisted tsunami damage and economic loss assessment project for Karachi Port, building spatial datasets to support machine learning model training.
+                </p>
+                <ul class="timeline-duty-list">
+                  <li>Digitised and validated building footprint data across approximately 460 km² of coastal study area by cross referencing and reconciling multiple open source datasets including Google Open Buildings and Microsoft Building Footprints against ground surveyed data.</li>
+                  <li>Developed a literature based building density classification methodology using spatial buffer analysis to support hydraulic roughness assignment for tsunami inundation modelling.</li>
+                  <li>Reviewed and synthesised peer reviewed literature covering tsunami fragility functions, port infrastructure vulnerability and urban hydraulic roughness to inform project methodology.</li>
+                  <li>Built and executed a QGIS based geoprocessing pipeline involving spatial filtering, deduplication, geometry validation and buffer density analysis across datasets containing more than 500,000 features.</li>
+                </ul>
+
+                <div class="research-callout-box panel-surface">
+                  <div class="research-callout-title">Research Note : Data Quality Edge Case</div>
+                  <p class="research-callout-text">
+                    Identified a real data quality edge case where automated false positive filtering performed well in planned residential zones but incorrectly removed legitimate structures in denser informal settlement areas, requiring a zone adaptive filtering approach.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Role 02 -->
+            <article class="timeline-card-entry">
+              <div class="timeline-date-col">
+                <span>Jun 2024 · 1 mo</span>
+              </div>
+              <div class="timeline-body-col">
+                <div>
+                  <h3 class="timeline-role-title">Urban Traffic Survey Intern</h3>
+                  <div class="timeline-org-name">NED University / KDA Toyota Road Improvement Project</div>
+                </div>
+                <p class="timeline-lead-desc">
+                  Conducted a comprehensive corridor and geometric audit to support roadway improvement and traffic safety interventions.
+                </p>
+                <ul class="timeline-duty-list">
+                  <li>Conducted a 3.2 km corridor study along Allama Shabbir Ahmed Usmani Road.</li>
+                  <li>Established 200 m chainage intervals across 16 designated survey segments.</li>
+                  <li>Documented structural encroachments, illegal parking zones, sightline obstructions, and traffic violations.</li>
+                  <li>Developed geometric road and intersection CAD models in AutoCAD.</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Role 03 -->
+            <article class="timeline-card-entry">
+              <div class="timeline-date-col">
+                <span>Nov · Dec 2023 · 1 mo</span>
+              </div>
+              <div class="timeline-body-col">
+                <div>
+                  <h3 class="timeline-role-title">GIS Research Intern</h3>
+                  <div class="timeline-org-name">ATLAS Lab, NED University</div>
+                </div>
+                <p class="timeline-lead-desc">
+                  Executed spatial data processing, structural geotagging, and regional infrastructure inventory compilation.
+                </p>
+                <ul class="timeline-duty-list">
+                  <li>Geotagged 8,717 residential structures within an assigned Kunhar boundary zone in Khyber Pakhtunkhwa (KPK).</li>
+                  <li>Processed, cleaned, and georeferenced spatial vector and raster data in ArcGIS.</li>
+                  <li>Contributed to regional residential infrastructure mapping and spatial inventory databases.</li>
+                  <li>Supported a parallel road safety awareness and accident data collection initiative.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           04 : PROJECTS SECTION (FLAGSHIP & CASE STUDIES)
+           ============================================================ -->
+      <section id="projects" class="section section-cream" aria-label="Selected Engineering Projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">03 : Technical Portfolio</span>
+            <h2 class="section-title">PROJECTS</h2>
+            <span class="section-subtitle">Coastal DEM modeling, AI damage assessment, traffic conflicts &amp; corridor audits</span>
+          </div>
+
+          <!-- ==========================================
+               PROJECT 01 : FLAGSHIP (TSUNAMI DEM & GIS)
+               ========================================== -->
+          <article class="project-editorial-block project-flagship-wrapper" id="project-tsunami">
+            <span class="project-flagship-label">FLAGSHIP CASE STUDY</span>
+
+            <div class="project-meta-line">
+              <span class="project-index-num">01 / FYP DESIGN PROJECT</span>
+              <span class="project-type-label">Tsunami Risk Assessment</span>
+              <span class="project-date-label">Oct 2024 to Aug 2025</span>
+            </div>
+
+            <div>
+              <h3 class="project-title-editorial">Tsunami Risk Assessment : Karachi Coastal Belt</h3>
+              <div class="project-location-text">Study Area: DHA Phase VIII · Emaar Crescent Bay · HMR Waterfront</div>
+            </div>
+
+            <!-- Quantitative Technical Result Annotations -->
+            <div class="project-metrics-strip">
+              <div class="project-stat-box">
+                <span class="stat-numeric-value">±2.98 m</span>
+                <span class="stat-label-text">DEM Validation RMSE</span>
+              </div>
+              <div class="project-stat-box">
+                <span class="stat-numeric-value">GEBCO + SRTM</span>
+                <span class="stat-label-text">Integrated Elevation Model</span>
+              </div>
+              <div class="project-stat-box">
+                <span class="stat-numeric-value">GNSS RTK</span>
+                <span class="stat-label-text">Ground Control Validation</span>
+              </div>
+              <div class="project-stat-box">
+                <span class="stat-numeric-value">QGIS</span>
+                <span class="stat-label-text">Spatial Processing</span>
+              </div>
+              <div class="project-stat-box">
+                <span class="stat-numeric-value">GeoClaw</span>
+                <span class="stat-label-text">Numerical Simulation</span>
+              </div>
+            </div>
+
+            <!-- Delineated Narrative & Technical Scope -->
+            <div class="project-two-col-grid">
+              <div class="project-text-column">
+                <h4>Project Scope &amp; Methodology</h4>
+                <p>
+                  A deterministic tsunami risk assessment of Karachi's coastal belt evaluating shoreline inundation dynamics. The project integrated bathymetric and topographic elevation data into a continuous Digital Elevation Model (DEM), validated against field GNSS ground control points, and executed GeoClaw shallow water numerical tsunami simulations across critical waterfront infrastructure developments.
+                </p>
+                
+                <div class="contribution-card-unit" style="margin-top: 1rem;">
+                  <span class="contribution-card-heading">Project Outputs (Team Simulation)</span>
+                  <ul class="contribution-points-list">
+                    <li>GeoClaw numerical hydrodynamic tsunami simulations</li>
+                    <li>Wave arrival times, wave heights, and maximum inundation extents</li>
+                    <li>Building typology physical vulnerability assessment</li>
+                    <li>Spatial risk maps and coastal mitigation recommendations</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-text-column">
+                <h4>Technical Scope &amp; Contribution</h4>
+                <div class="contribution-card-unit lead-focus">
+                  <span class="contribution-card-heading">DEM Development &amp; GIS Workflow (Independent Execution)</span>
+                  <p style="font-size: 0.875rem; color: var(--color-ink); margin-bottom: 0.5rem;">
+                    Independent execution of the complete DEM and GIS workflow:
+                  </p>
+                  <ul class="contribution-points-list">
+                    <li>Researched DEM generation methodologies for coastal transition zones.</li>
+                    <li>Selected, harmonized, and prepared elevation datasets (GEBCO bathymetry and SRTM topography).</li>
+                    <li>Planned and executed GNSS field survey work to collect high precision Ground Control Points (GCPs).</li>
+                    <li>Developed the seamless integrated bathymetric topographic DEM in QGIS.</li>
+                    <li>Statistically validated the DEM against field GCPs, achieving an RMSE of <strong>±2.98 m</strong>.</li>
+                    <li>Produced cartographic spatial risk maps, elevation profiles, and technical documentation.</li>
+                    <li>Coordinated the elevation data model integration with numerical tsunami simulations.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Balanced Figure Viewer Showcase (All 4 in 1 Row on Desktop) -->
+            <div class="figure-showcase-container">
+              <div class="figure-tab-bar" role="tablist" aria-label="Project Figures">
+                <button class="figure-tab-btn active" role="tab" aria-selected="true" data-figure="fig1">01 Study Area</button>
+                <button class="figure-tab-btn" role="tab" aria-selected="false" data-figure="fig2">02 DEM Profile</button>
+                <button class="figure-tab-btn" role="tab" aria-selected="false" data-figure="fig3">03 GeoClaw Workflow</button>
+                <button class="figure-tab-btn" role="tab" aria-selected="false" data-figure="fig4">04 Error Validation</button>
+              </div>
+
+              <div class="figure-display-stage">
+                <!-- Figure 1 -->
+                <div class="figure-slide-panel active" data-figure-id="fig1">
+                  <img src="assets/projects/fyp/tsunami-study-area.png" alt="Study area of Tsunami Risk Assessment : Karachi Coastal Belt" data-title="Figure 01 : Study Area of Tsunami Risk Assessment" data-zoomable loading="lazy">
+                  <div class="figure-caption-strip">
+                    <span class="fig-badge-num">FIG. 01</span>
+                    <span class="fig-caption-body">Study area map of the Karachi Coastal Belt delineating DHA Phase VIII, Emaar Crescent Bay, and HMR Waterfront sectors with bathymetric depth boundaries.</span>
+                  </div>
+                </div>
+
+                <!-- Figure 2 -->
+                <div class="figure-slide-panel" data-figure-id="fig2">
+                  <img src="assets/projects/fyp/dem-profile.png" alt="Topo-Bathy DEM profile transect" data-title="Figure 02 : Topographic-Bathymetric DEM Profile" data-zoomable loading="lazy">
+                  <div class="figure-caption-strip">
+                    <span class="fig-badge-num">FIG. 02</span>
+                    <span class="fig-caption-body">Integrated topographic bathymetric DEM elevation profile demonstrating seamless transition across Mean Sea Level datum (0.00 m).</span>
+                  </div>
+                </div>
+
+                <!-- Figure 3 -->
+                <div class="figure-slide-panel" data-figure-id="fig3">
+                  <img src="assets/projects/fyp/geoclaw-steps.png" alt="Simulation steps for GeoClaw numerical modeling" data-title="Figure 03 : GeoClaw Hydrodynamic Simulation Steps" data-zoomable loading="lazy">
+                  <div class="figure-caption-strip">
+                    <span class="fig-badge-num">FIG. 03</span>
+                    <span class="fig-caption-body">Hydrodynamic simulation methodology workflow executed in GeoClaw for coastal inundation and wave height progression.</span>
+                  </div>
+                </div>
+
+                <!-- Figure 4 -->
+                <div class="figure-slide-panel" data-figure-id="fig4">
+                  <img src="assets/projects/fyp/rmse-graph.png" alt="Graphical representation of RMSE and ME validation" data-title="Figure 04 : Graphical Representation of RMSE and ME Validation" data-zoomable loading="lazy">
+                  <div class="figure-caption-strip">
+                    <span class="fig-badge-num">FIG. 04</span>
+                    <span class="fig-caption-body">Statistical evaluation of DEM elevation against field GNSS Ground Control Points showing RMSE of ±2.98 m.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               PROJECT 02 : CURRENT RESEARCH (AI TSUNAMI DAMAGE)
+               ========================================== -->
+          <article class="project-editorial-block" id="project-research">
+            <div class="project-meta-line">
+              <span class="project-index-num">02 / RESEARCH WORK SAMPLE</span>
+              <span class="project-type-label">AI Assisted Damage Assessment</span>
+              <span class="project-date-label">July 2026 Present</span>
+            </div>
+
+            <div>
+              <h3 class="project-title-editorial">AI Assisted Tsunami Damage Assessment : Karachi Port</h3>
+              <div class="project-location-text">Ongoing Research · Karachi Port</div>
+            </div>
+
+            <div class="project-two-col-grid">
+              <div class="project-text-column">
+                <h4>Research Scope &amp; Machine Learning Dataset Prep</h4>
+                <p>
+                  A research project aimed at developing predictive AI models for estimating tsunami damage and economic loss across Karachi Port. The spatial preparation workflow focuses on building a unified high resolution building inventory across 460 km² of coastal land.
+                </p>
+                <div class="contribution-card-unit" style="margin-top: 1rem;">
+                  <span class="contribution-card-heading">Methodological Pipeline</span>
+                  <ul class="contribution-points-list">
+                    <li>Reconciliation of Google Open Buildings and Microsoft Building Footprints datasets.</li>
+                    <li>Spatial buffer density analysis across 500,000+ structural features in QGIS.</li>
+                    <li>Zone adaptive filtering to resolve informal settlement detection edge cases.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-text-column">
+                <div class="contribution-card-unit">
+                  <span class="contribution-card-heading">Hydraulic Roughness Assignment</span>
+                  <p style="font-size: 0.875rem; color: var(--color-ink); margin-bottom: 0.5rem;">
+                    Building density classifications developed through this workflow are directly utilized to compute spatial Manning's roughness coefficients ($n$) for hydrodynamic inundation models.
+                  </p>
+                  <ul class="contribution-points-list">
+                    <li>Synthesised peer reviewed tsunami fragility functions.</li>
+                    <li>Port infrastructure vulnerability categorisation.</li>
+                    <li>Automated spatial geoprocessing scripts for data deduplication.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               PROJECT 03 : TRAFFIC CONFLICT STUDY
+               ========================================== -->
+          <article class="project-editorial-block" id="project-traffic">
+            <div class="project-meta-line">
+              <span class="project-index-num">03 / COURSEWORK CASE STUDY</span>
+              <span class="project-type-label">UE 356 Traffic Engineering &amp; Management</span>
+              <span class="project-date-label">Jun 2024</span>
+            </div>
+
+            <div>
+              <h3 class="project-title-editorial">Traffic Conflict &amp; Pedestrian Safety Study</h3>
+              <div class="project-location-text">Disco Bakery Node, Karachi</div>
+            </div>
+
+            <div class="project-two-col-grid">
+              <div class="project-text-column">
+                <h4>Assigned Scope &amp; Methodology</h4>
+                <p>
+                  Field based traffic safety investigation analyzing multi modal intersection dynamics under peak period congestion. Applied the formal <strong>Traffic Conflict Technique (TCT)</strong> to quantify near miss events and crossing hazards.
+                </p>
+                <ul class="contribution-points-list" style="margin-top: 0.75rem;">
+                  <li>Disaggregated 15 minute pedestrian volume counts to capture peak crossing surges.</li>
+                  <li>Systematic traffic conflict classification across vehicles, auto rickshaws, and non motorised transport (NMT).</li>
+                  <li>Signal timing analysis, approach capacity evaluation, and cycle length validation.</li>
+                </ul>
+              </div>
+
+              <div class="project-text-column">
+                <h4>Extended Technical Scope &amp; Deliverables</h4>
+                <div class="contribution-card-unit">
+                  <span class="contribution-card-heading">Spatial Mapping &amp; AutoCAD Representation</span>
+                  <p style="font-size: 0.875rem; color: var(--color-ink); margin-bottom: 0.5rem;">
+                    Extended deliverables developed beyond standard numerical coursework requirements:
+                  </p>
+                  <ul class="contribution-points-list">
+                    <li>Spatial mapping of observed conflict locations and high severity collision paths.</li>
+                    <li>Multi modal directional movement diagrams capturing rickshaw weaving patterns.</li>
+                    <li>Scaled geometric CAD representation of the intersection in AutoCAD.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Schematic Intersection Layout & Real Project Visuals Grid -->
+            <div class="figure-showcase-container">
+              <div class="traffic-cad-frame">
+                <canvas id="intersection-canvas"></canvas>
+
+                <!-- Interactive Field Evidence Hotspot -->
+                <div class="cad-hotspot-container" id="maskan-hotspot-01">
+                  <div class="cad-hotspot-badge">FIELD OBS. 01</div>
+                  <button type="button" class="cad-hotspot-beacon" aria-label="Inspect Field Observation 01: Push Cart Vendor Roadway Encroachment">
+                    <span class="beacon-pulse-ring"></span>
+                    <span class="beacon-core"></span>
+                  </button>
+
+                  <!-- Compact Technical Field Evidence Video Preview Popover -->
+                  <div class="field-obs-preview-popover">
+                    <div class="preview-top-bar">
+                      <span>FIELD EVIDENCE : OBS 01</span>
+                      <span style="color: #A8A196;">DISCO BAKERY NODE</span>
+                    </div>
+
+                    <div class="preview-video-stage" title="Click to enlarge field observation footage">
+                      <video id="hotspot-preview-video" muted loop playsinline preload="metadata">
+                        <source src="assets/projects/traffic/push-cart-vendor.mp4" type="video/mp4">
+                        <source src="assets/projects/traffic/Push Cart Vendor.mov" type="video/quicktime">
+                      </video>
+                      <div class="preview-stage-overlay">
+                        <div class="preview-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="preview-details-prose">
+                      <strong>Observed Condition:</strong> Push cart vendor occupying active carriageway lane, causing vehicular weaving and pedestrian crossing impediment.
+                    </p>
+
+                    <div class="preview-action-hint">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                      <span>Click to enlarge footage</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="figure-caption-strip">
+                <span class="fig-badge-num">SCHEMATIC VISUAL → FIELD EVIDENCE</span>
+                <span class="fig-caption-body">Interactive conflict point index: Schematic intersection geometry with dynamic field evidence index. Select the pulsing hotspot to inspect actual survey footage of roadside vendor encroachment.</span>
+              </div>
+
+              <!-- Real Traffic Visuals Row -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div style="background-color: #0C0C0B; border: 1px solid var(--color-cream-border); padding: 0.5rem; cursor: zoom-in;">
+                  <img src="assets/projects/traffic/disco-conflict.png" alt="Disco Bakery traffic conflict study mapping" data-title="Disco Bakery Traffic Conflict Mapping" data-zoomable loading="lazy">
+                  <div class="figure-caption-strip">
+                    <span class="fig-badge-num">MAP 01</span>
+                    <span class="fig-caption-body" style="color: #FFFFFF;">Disco Bakery node spatial conflict distribution mapping.</span>
+                  </div>
+                </div>
+
+                <div style="background-color: #0C0C0B; border: 1px solid var(--color-cream-border); padding: 0.5rem; cursor: zoom-in;">
+                  <img src="assets/projects/traffic/Pedestrain count.jpeg" alt="Pedestrian volume survey count sheet" data-title="Pedestrian Volume Survey Data Sheet" data-zoomable loading="lazy">
+                  <div class="figure-caption-strip">
+                    <span class="fig-badge-num">SHEET 02</span>
+                    <span class="fig-caption-body" style="color: #FFFFFF;">Disaggregated 15 minute pedestrian survey data collection sheet.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               PROJECT 04 : CORRIDOR INFRASTRUCTURE AUDIT
+               ========================================== -->
+          <article class="project-editorial-block" id="project-corridor">
+            <div class="project-meta-line">
+              <span class="project-index-num">04 / INFRASTRUCTURE AUDIT</span>
+              <span class="project-type-label">Corridor Geometric &amp; Pavement Assessment</span>
+              <span class="project-date-label">Jun 2024</span>
+            </div>
+
+            <div>
+              <h3 class="project-title-editorial">Urban Infrastructure Audit : Allama Shabbir Usmani Corridor</h3>
+              <div class="project-location-text">3.2 km Corridor Study · 16 Survey Segments @ 200m Chainage Intervals</div>
+            </div>
+
+            <div class="project-two-col-grid">
+              <div class="project-text-column">
+                <h4>Audit Scope &amp; Engineering Deliverables</h4>
+                <p>
+                  A systematic field audit of the 3.2 km Allama Shabbir Ahmed Usmani Road corridor to identify infrastructural bottlenecks, right of way encroachments, pavement distress, and parking violations.
+                </p>
+                <ul class="contribution-points-list" style="margin-top: 0.75rem;">
+                  <li>Prepared 16 standardized schematic CAD survey sheets.</li>
+                  <li>Documented roadway geometry, carriageway widths, and median configurations.</li>
+                  <li>Mapped pedestrian sightline obstructions and land use encroachments.</li>
+                  <li>Assessed pavement surface defects to support municipal maintenance prioritisation.</li>
+                </ul>
+              </div>
+
+              <div class="project-text-column">
+                <h4>Survey Corridor Documentation</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                  <div style="background-color: #0C0C0B; border: 1px solid var(--color-cream-border); padding: 0.4rem; cursor: zoom-in;">
+                    <img src="assets/projects/infrastructure/usmani-corridor-1.png" alt="Allama Shabbir Ahmed Usmani Road Corridor Survey 1" data-title="Usmani Corridor Survey Sheet 01" data-zoomable loading="lazy">
+                  </div>
+                  <div style="background-color: #0C0C0B; border: 1px solid var(--color-cream-border); padding: 0.4rem; cursor: zoom-in;">
+                    <img src="assets/projects/infrastructure/usmani-corridor-2.png" alt="Allama Shabbir Ahmed Usmani Road Corridor Survey 2" data-title="Usmani Corridor Survey Sheet 02" data-zoomable loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive 16-Segment Chainage Inspector (DISTINCT DARK TECHNICAL INSTRUMENT) -->
+            <div class="corridor-inspector-box">
+              <div class="corridor-top-header">
+                <div>
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--color-ochre); letter-spacing: 0.1em; text-transform: uppercase;">INTERACTIVE CHAINAGE INSPECTOR</span>
+                  <p style="font-size: 0.8125rem; color: #A8A196; margin-top: 0.2rem;">Hover or click across any of the 16 survey segments (200m each) to inspect field audit data:</p>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #78736A;">CHAINAGE: 0+000 TO 3+200</span>
+              </div>
+
+              <!-- Segment Nodes Track -->
+              <div class="corridor-segments-rail" id="corridor-track">
+                <!-- Dynamically rendered via corridor-audit.js -->
+              </div>
+
+              <!-- Segment Inspector Data Card -->
+              <div class="segment-data-dashboard" id="segment-inspector">
+                <!-- Dynamically populated via corridor-audit.js -->
+              </div>
+
+              <div class="figure-caption-strip">
+                <span class="fig-badge-num">INSPECTOR</span>
+                <span class="fig-caption-body" style="color: #A8A196;">Corridor survey sheet inspection system: 16 individual 200m survey sheets compiled from field geometric measurements and pavement condition assessments.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               PROJECT 05 : SHAHRAH-E-FAISAL CROSS SECTION
+               ========================================== -->
+          <article class="project-editorial-block" id="project-faisal">
+            <div class="project-meta-line">
+              <span class="project-index-num">05 / GEOMETRIC DESIGN</span>
+              <span class="project-type-label">Roadway Cross Section Analysis</span>
+              <span class="project-date-label">Academic Spatial Study</span>
+            </div>
+
+            <div>
+              <h3 class="project-title-editorial">Geometric Cross Section Design : Shahrah e Faisal</h3>
+              <div class="project-location-text">Major Urban Arterial Corridor, Karachi</div>
+            </div>
+
+            <div class="project-two-col-grid">
+              <div class="project-text-column">
+                <h4>Geometric Analysis &amp; Right of Way Optimization</h4>
+                <p>
+                  Geometric evaluation and cross sectional redesign of Shahrah e Faisal, analyzing existing carriageway lane widths, median dividers, pedestrian facilities, and storm drainage integration to optimize arterial vehicular throughput.
+                </p>
+              </div>
+
+              <div class="project-text-column">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                  <div style="background-color: #0C0C0B; border: 1px solid var(--color-cream-border); padding: 0.4rem; cursor: zoom-in;">
+                    <img src="assets/projects/Shah rah-e Faisal/existing cross section.png" alt="Shahrah e Faisal Existing Cross Section" data-title="Shahrah e Faisal Existing Cross Section" data-zoomable loading="lazy">
+                    <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: #FFFFFF; margin-top: 0.35rem;">Existing Cross Section</div>
+                  </div>
+                  <div style="background-color: #0C0C0B; border: 1px solid var(--color-cream-border); padding: 0.4rem; cursor: zoom-in;">
+                    <img src="assets/projects/Shah rah-e Faisal/cross section.png" alt="Shahrah e Faisal Proposed Cross Section" data-title="Shahrah e Faisal Proposed Cross Section" data-zoomable loading="lazy">
+                    <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--color-ochre); margin-top: 0.35rem;">Proposed Geometric Redesign</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           05 : EDUCATION SECTION (DEEP CHARCOAL CANVAS)
+           ============================================================ -->
+      <section id="education" class="section section-dark" aria-label="Education & Academic Background">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">04 : Academic Background</span>
+            <h2 class="section-title">EDUCATION</h2>
+            <span class="section-subtitle">Accredited engineering degree &amp; coursework</span>
+          </div>
+
+          <div class="education-editorial-layout">
+            <!-- Primary Degree -->
+            <div class="edu-primary-panel panel-surface">
+              <div class="edu-inst-tag">NED University of Engineering &amp; Technology</div>
+              <h3 class="edu-degree-heading">Bachelor of Engineering (B.E.) : Civil Engineering</h3>
+              
+              <div class="edu-meta-stats">
+                <div>
+                  <span>Specialisation:</span>
+                  <strong>Urban Engineering</strong>
+                </div>
+                <div>
+                  <span>Duration:</span>
+                  <strong>October 2021 August 2025</strong>
+                </div>
+                <div>
+                  <span>CGPA:</span>
+                  <strong>3.27 / 4.0</strong>
+                </div>
+              </div>
+
+              <div class="edu-courses-block">
+                <h4 class="edu-courses-title">Relevant Engineering Coursework</h4>
+                <ul class="edu-chips-wrap">
+                  <li class="edu-course-item">Construction Engineering</li>
+                  <li class="edu-course-item">Essentials in CPM</li>
+                  <li class="edu-course-item">Quantity &amp; Cost Estimation</li>
+                  <li class="edu-course-item">RC Design I &amp; II</li>
+                  <li class="edu-course-item">Design of Steel Structures</li>
+                  <li class="edu-course-item">Law &amp; Regulatory Control</li>
+                  <li class="edu-course-item">Geographic Information Systems (GIS)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Secondary Education -->
+            <div class="edu-secondary-panel panel-surface">
+              <div class="edu-inst-tag" style="color: #A8A196;">Secondary Education</div>
+              <h3 style="font-size: 1.35rem; color: var(--color-bone); margin-bottom: 0.4rem;">Bahria College NORE 1</h3>
+              <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: #A8A196; margin-bottom: 0.75rem;">
+                Intermediate : Pre Engineering · 2019 to 2021
+              </div>
+              <p style="font-size: 0.8125rem; color: #C8C2B6;">
+                Graduated with First Division standing in Pre Engineering science curriculum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           06 : TECHNICAL TOOLKIT SECTION (WARM CREAM CANVAS)
+           ============================================================ -->
+      <section id="toolkit" class="section section-cream" aria-label="Technical Toolkit">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">05 : Engineering Competencies</span>
+            <h2 class="section-title">TECHNICAL TOOLKIT</h2>
+            <span class="section-subtitle">Categorized software, spatial tools &amp; engineering documentation</span>
+          </div>
+
+          <div class="toolkit-editorial-grid">
+            <!-- GIS & Spatial Analysis -->
+            <div class="toolkit-category-card panel-surface">
+              <div class="toolkit-cat-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <span>GIS &amp; Spatial Analysis</span>
+              </div>
+              <ul class="toolkit-tags-list">
+                <li class="toolkit-tag-node">QGIS</li>
+                <li class="toolkit-tag-node">ArcGIS Pro</li>
+                <li class="toolkit-tag-node">ArcGIS</li>
+                <li class="toolkit-tag-node">Google Earth</li>
+                <li class="toolkit-tag-node">GNSS Data Collection</li>
+              </ul>
+            </div>
+
+            <!-- Civil Engineering / CAD / BIM -->
+            <div class="toolkit-category-card panel-surface">
+              <div class="toolkit-cat-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                <span>Civil Engineering / CAD / BIM</span>
+              </div>
+              <ul class="toolkit-tags-list">
+                <li class="toolkit-tag-node">AutoCAD</li>
+                <li class="toolkit-tag-node">Civil 3D</li>
+                <li class="toolkit-tag-node">Revit</li>
+              </ul>
+            </div>
+
+            <!-- Engineering / Modelling -->
+            <div class="toolkit-category-card panel-surface">
+              <div class="toolkit-cat-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                <span>Engineering / Modelling</span>
+              </div>
+              <ul class="toolkit-tags-list">
+                <li class="toolkit-tag-node">GeoClaw</li>
+                <li class="toolkit-tag-node">MATLAB</li>
+                <li class="toolkit-tag-node">MS Project</li>
+                <li class="toolkit-tag-node">Primavera P6</li>
+              </ul>
+            </div>
+
+            <!-- Data / Documentation -->
+            <div class="toolkit-category-card panel-surface">
+              <div class="toolkit-cat-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span>Data / Documentation</span>
+              </div>
+              <ul class="toolkit-tags-list">
+                <li class="toolkit-tag-node">MS Excel</li>
+                <li class="toolkit-tag-node">MS Word</li>
+                <li class="toolkit-tag-node">MS PowerPoint</li>
+                <li class="toolkit-tag-node">Technical Writing</li>
+                <li class="toolkit-tag-node">Technical Reporting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           07 : LEADERSHIP & INVOLVEMENT (DEEP CHARCOAL CANVAS)
+           ============================================================ -->
+      <section id="leadership" class="section section-dark" aria-label="Leadership & Involvement">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">06 : Society Governance</span>
+            <h2 class="section-title">LEADERSHIP &amp; INVOLVEMENT</h2>
+            <span class="section-subtitle">Departmental society administration, technical reporting &amp; symposium hosting</span>
+          </div>
+
+          <div class="leadership-editorial-grid">
+            <!-- Role 01 -->
+            <div class="leadership-box">
+              <div class="leadership-time-tag">Oct 2023 to Aug 2024</div>
+              <h3 class="leadership-head-role">Head of Documentation</h3>
+              <div class="leadership-inst-label">ITE NEDUET Student Chapter</div>
+              <ul class="leadership-items-list">
+                <li>Led technical documentation and official correspondence for a 100+ member engineering society.</li>
+                <li>Managed approvals and logistics with faculty and university administration.</li>
+                <li>Hosted the 2023 induction ceremony at Ashraf Habibullah AV Hall for an audience of 100+ attendees.</li>
+                <li>Developed social media content strategy and technical scripts for departmental seminars and conferences.</li>
+              </ul>
+            </div>
+
+            <!-- Role 02 -->
+            <div class="leadership-box">
+              <div class="leadership-time-tag">Oct 2022 to Aug 2024</div>
+              <h3 class="leadership-head-role">Co Director of Documentation</h3>
+              <div class="leadership-inst-label">Urban Realm NEDUET</div>
+              <ul class="leadership-items-list">
+                <li>Managed documentation and archives across multiple teams for nearly two years.</li>
+                <li>Conceptualised the framework for a yearbook covering seminars, research highlights and society milestones.</li>
+                <li>Directed alumni outreach and official communications.</li>
+              </ul>
+            </div>
+
+            <!-- Role 03 -->
+            <div class="leadership-box">
+              <div class="leadership-time-tag">Annual Event</div>
+              <h3 class="leadership-head-role">Master of Ceremonies</h3>
+              <div class="leadership-inst-label">Al Birr Institute Annual Showcase</div>
+              <ul class="leadership-items-list">
+                <li>Hosted institutional event proceedings for students, faculty, and invited guests.</li>
+                <li>Coordinated stage logistics, itinerary timing, and speaker introductions.</li>
+              </ul>
+            </div>
+
+            <!-- Role 04 -->
+            <div class="leadership-box">
+              <div class="leadership-time-tag">Dec 2023</div>
+              <h3 class="leadership-head-role">Student Volunteer</h3>
+              <div class="leadership-inst-label">13th ICEC NED University</div>
+              <ul class="leadership-items-list">
+                <li>Assisted in technical session management at the International Civil Engineering Conference.</li>
+                <li>Coordinated attendee registration, delegate assistance, and speaker coordination.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           08 : PROFESSIONAL REGISTRATION (WARM CREAM CANVAS)
+           ============================================================ -->
+      <section id="registration" class="section section-cream" aria-label="Professional Registration">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">07 : Licensure</span>
+            <h2 class="section-title">PROFESSIONAL REGISTRATION</h2>
+          </div>
+
+          <div class="pec-registration-module panel-surface">
+            <div class="pec-details-cluster">
+              <div class="pec-badge-symbol">
+                <img src="assets/certificates/pec-logo.png" alt="Pakistan Engineering Council Official Logo">
+              </div>
+              <div class="pec-meta-typography">
+                <h3 class="pec-main-heading">Registered Engineer (RE)</h3>
+                <div class="pec-council-text">Pakistan Engineering Council</div>
+              </div>
+            </div>
+
+            <div>
+              <span class="btn btn-light" style="cursor: default; pointer-events: none;">
+                Verified Registration
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           09 : CONTACT SECTION (DEEP CHARCOAL CANVAS) - BALANCED LAYOUT
+           ============================================================ -->
+      <section id="contact" class="section section-dark" aria-label="Contact Information">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">08 : Enquiries &amp; Collaboration</span>
+            <h2 class="section-title">LET'S TALK</h2>
+            <span class="section-subtitle">For engineering opportunities, research collaboration, project discussions or professional enquiries.</span>
+          </div>
+
+          <div class="contact-editorial-split">
+            <!-- Left: Direct Details & Actions -->
+            <div class="contact-left-details">
+              <p class="contact-open-statement">
+                Available for early career civil engineering roles, infrastructure planning opportunities, research collaboration, and spatial analysis discussions.
+              </p>
+
+              <ul class="contact-links-stack">
+                <li class="contact-link-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <a href="mailto:ayanhasan.nn@gmail.com" class="text-link js-email-action">ayanhasan.nn@gmail.com</a>
+                </li>
+                <li class="contact-link-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <a href="tel:+923012875400" class="text-link">+92 301 2875400</a>
+                </li>
+                <li class="contact-link-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>DHA, Karachi, Pakistan</span>
+                </li>
+              </ul>
+
+              <div class="contact-buttons-row">
+                <a href="https://www.linkedin.com/in/ayan-hasan" target="_blank" rel="noopener noreferrer" class="btn btn-frosted btn-sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  LinkedIn
+                </a>
+                <a href="mailto:ayanhasan.nn@gmail.com" class="btn btn-frosted btn-sm js-email-action">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  Email
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Compact Editorial Form Module (Aligned Height) -->
+            <div class="contact-form-panel">
+              <form id="compact-contact-form" class="contact-editorial-form">
+                <div class="form-control-unit">
+                  <label for="form-name">Full Name</label>
+                  <input type="text" id="form-name" placeholder="e.g. Engr. Sara Khan" required>
+                </div>
+
+                <div class="form-control-unit">
+                  <label for="form-email">Your Email</label>
+                  <input type="email" id="form-email" placeholder="e.g. name@organization.com" required>
+                </div>
+
+                <div class="form-control-unit">
+                  <label for="form-category">Enquiry Category</label>
+                  <select id="form-category" style="cursor: pointer;">
+                    <option value="Engineering Opportunity">Engineering Opportunity / Recruitment</option>
+                    <option value="Research Collaboration">Research Collaboration</option>
+                    <option value="GIS &amp; Spatial Project">GIS &amp; Spatial Analysis Discussion</option>
+                    <option value="General Professional Enquiry">General Professional Enquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-control-unit">
+                  <label for="form-message">Message Details</label>
+                  <textarea id="form-message" placeholder="Outline your project scope or enquiry details..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  Send Enquiry via Email
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+
+                <span class="form-disclaimer-text">Encodes subject and message directly into your email client.</span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+         EDITORIAL IMAGE LIGHTBOX MODAL
+         ============================================================ -->
+    <div id="editorial-lightbox" class="lightbox-backdrop" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <div class="lightbox-shell">
+        <div class="lightbox-top-bar">
+          <span id="lightbox-title" class="lightbox-title-label">Engineering Visual</span>
+          <button type="button" class="lightbox-dismiss-btn" aria-label="Close lightbox">&times;</button>
+        </div>
+        <div class="lightbox-image-stage" id="lightbox-content-stage">
+          <img id="lightbox-image" src="" alt="Zoomed Engineering Visual">
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         MINIMAL EDITORIAL FOOTER
+         ============================================================ -->
+    <footer class="site-footer-colophon" role="contentinfo">
+      <div class="container footer-flex-row">
+        <div class="footer-brand-title">
+          <strong>AYAN HASAN</strong>
+          <span>Civil Engineer · Karachi, Pakistan</span>
+        </div>
+
+        <ul class="footer-quick-links">
+          <li><a href="https://www.linkedin.com/in/ayan-hasan" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn</a></li>
+          <li><a href="mailto:ayanhasan.nn@gmail.com" class="text-link js-email-action">Email</a></li>
+          <li><a href="#home" class="text-link">Back to Top ↑</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast Floating Notification Container -->
+  <div id="toast-floating-notice" class="toast-floating-notice" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/scroll-art.js"></script>
+  <script src="js/corridor-audit.js"></script>
+  <script src="js/intersection-canvas.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

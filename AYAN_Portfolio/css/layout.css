@@ -1,0 +1,1115 @@
+/* ============================================================
+   AYAN HASAN : PERSONAL ENGINEERING PORTFOLIO
+   Layout, Navigation, Persistent Rail, Hero Cover & Breakpoints
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Persistent Left Side Rail (Desktop)
+   ------------------------------------------------------------ */
+.side-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--rail-width);
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+  background-color: var(--color-charcoal-deep);
+  border-right: 1px solid var(--color-charcoal-border);
+}
+
+.rail-logo {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-bone);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-charcoal-border);
+  background-color: var(--color-charcoal-surface);
+  transition: all var(--transition-fast);
+}
+
+.rail-logo:hover {
+  border-color: var(--color-ochre);
+  color: var(--color-ochre);
+}
+
+.rail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  align-items: center;
+}
+
+.rail-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B2ACA2;
+  border: 1px solid var(--color-charcoal-border);
+  background-color: rgba(32, 32, 30, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.rail-btn:hover {
+  color: var(--color-bone);
+  border-color: var(--color-ochre-border);
+  background-color: var(--color-ochre-dim);
+  transform: translateY(-2px);
+}
+
+.rail-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.rail-coord {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.16em;
+  color: #6E685E;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------
+   Header & Dynamic Sticky Navigation
+   ------------------------------------------------------------ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: var(--rail-width);
+  right: 0;
+  height: var(--header-height);
+  z-index: 95;
+  transition: background-color var(--transition-base), border-color var(--transition-base), backdrop-filter var(--transition-base), color var(--transition-base);
+  border-bottom: 1px solid transparent;
+  color: var(--color-bone);
+}
+
+.site-header.scrolled {
+  background-color: rgba(20, 20, 19, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: var(--color-charcoal-border);
+  color: var(--color-bone);
+}
+
+/* When scrolling over light cream or stone sections */
+.site-header.theme-light.scrolled {
+  background-color: rgba(248, 244, 236, 0.92);
+  border-bottom-color: var(--color-cream-border);
+  color: var(--color-ink);
+}
+
+.site-header.theme-light .nav-link {
+  color: var(--color-ink-muted);
+}
+
+.site-header.theme-light .nav-link:hover,
+.site-header.theme-light .nav-link.active {
+  color: var(--color-ink);
+}
+
+.site-header.theme-light .brand-name {
+  color: var(--color-ink);
+}
+
+.site-header.theme-light .menu-toggle {
+  background-color: #FFFFFF;
+  border-color: var(--color-cream-border);
+}
+
+.site-header.theme-light .menu-toggle span {
+  background-color: var(--color-ink);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.brand-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: clamp(0.75rem, 1.8vw, 1.75rem);
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: inherit;
+  opacity: 0.85;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.2rem;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.nav-num {
+  font-size: 0.6875rem;
+  color: var(--color-ochre);
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: var(--color-ochre);
+}
+
+.nav-link.active {
+  opacity: 1;
+  color: var(--color-ochre);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-ochre);
+}
+
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: var(--color-charcoal-surface);
+  border: 1px solid var(--color-charcoal-border);
+  cursor: pointer;
+  z-index: 110;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background-color: var(--color-bone);
+  transition: all var(--transition-fast);
+}
+
+.menu-toggle.open span:first-child {
+  transform: translateY(3.25px) rotate(45deg);
+}
+
+.menu-toggle.open span:last-child {
+  transform: translateY(-3.25px) rotate(-45deg);
+}
+
+/* ------------------------------------------------------------
+   01 : NEW EDITORIAL COVER LANDING
+   ------------------------------------------------------------ */
+.hero-editorial {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 2.5rem;
+  position: relative;
+  background-color: var(--color-charcoal-base);
+  border-bottom: 1px solid var(--color-charcoal-border);
+}
+
+.hero-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero-left-col {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.hero-meta-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ochre);
+  margin-bottom: 1.5rem;
+}
+
+.hero-headline-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.hero-name-primary {
+  font-size: clamp(3.75rem, 10vw, 8rem);
+  font-weight: 700;
+  line-height: 0.86;
+  letter-spacing: -0.04em;
+  color: var(--color-bone);
+  text-transform: uppercase;
+}
+
+.hero-name-secondary {
+  font-size: clamp(3.75rem, 10vw, 8rem);
+  font-weight: 700;
+  line-height: 0.86;
+  letter-spacing: -0.04em;
+  color: #C8C2B6;
+  text-transform: uppercase;
+  margin-top: 0.12em;
+}
+
+.hero-designation-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-designation-text {
+  font-family: var(--font-mono);
+  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-ochre);
+}
+
+.hero-dot-sep {
+  color: #8E887E;
+}
+
+.hero-sub-text {
+  font-family: var(--font-body);
+  font-size: 1.12rem;
+  color: #C8C2B6;
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 2.25rem;
+}
+
+.hero-actions-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+}
+
+/* Integrated Profile Visual Column */
+.hero-right-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.hero-portrait-composition {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--color-charcoal-border);
+  background-color: var(--color-charcoal-surface);
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: contrast(102%) brightness(98%);
+  transition: transform var(--transition-slow);
+}
+
+.hero-portrait-composition:hover .hero-portrait-img {
+  transform: scale(1.02);
+}
+
+.hero-portrait-stamp {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  background: rgba(20, 20, 19, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--color-charcoal-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: #9E988E;
+}
+
+.hero-footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-charcoal-border);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #8E887E;
+  z-index: 3;
+}
+
+.hero-footer-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-footer-item strong {
+  color: var(--color-bone);
+}
+
+/* ------------------------------------------------------------
+   02 : ABOUT SECTION (WARM CREAM EDITORIAL CANVAS)
+   ------------------------------------------------------------ */
+.about-asymmetric-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.about-summary-panel {
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(23, 23, 22, 0.08);
+}
+
+.about-meta-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ochre-dark);
+  font-weight: 600;
+}
+
+.about-meta-val {
+  font-size: 0.9375rem;
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.about-prose {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.about-prose-lead {
+  font-size: 1.25rem;
+  color: var(--color-ink);
+  line-height: 1.52;
+  font-weight: 500;
+}
+
+.interests-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(23, 23, 22, 0.1);
+}
+
+.interests-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ochre-dark);
+  margin-bottom: 1rem;
+}
+
+.interests-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  list-style: none;
+}
+
+.interest-chip {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-cream-border);
+  padding: 0.45rem 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all var(--transition-fast);
+}
+
+.interest-chip:hover {
+  border-color: var(--color-ochre-dark);
+  color: var(--color-ochre-dark);
+  transform: translateY(-1px);
+}
+
+/* ------------------------------------------------------------
+   03 : EXPERIENCE TIMELINE (DEEP CHARCOAL)
+   ------------------------------------------------------------ */
+.experience-timeline-track {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.experience-timeline-track::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 220px;
+  width: 1px;
+  background-color: var(--color-charcoal-border);
+}
+
+.timeline-card-entry {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: clamp(1.5rem, 3vw, 3.5rem);
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid var(--color-charcoal-border);
+  position: relative;
+}
+
+.timeline-card-entry:last-child {
+  border-bottom: none;
+}
+
+.timeline-date-col {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-ochre);
+  font-weight: 500;
+  padding-right: 1.5rem;
+  position: relative;
+}
+
+.timeline-date-col::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--color-charcoal-base);
+  border: 1.5px solid var(--color-ochre);
+}
+
+.timeline-body-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-role-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--color-bone);
+  margin-bottom: 0.2rem;
+}
+
+.timeline-org-name {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: #C8C2B6;
+}
+
+.timeline-advisor-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-lavender);
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-lead-desc {
+  font-size: 0.95rem;
+  color: #C8C2B6;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.timeline-duty-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.timeline-duty-list li {
+  font-size: 0.9rem;
+  color: #C8C2B6;
+  position: relative;
+  padding-left: 1.35rem;
+  line-height: 1.55;
+}
+
+.timeline-duty-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-ochre);
+  font-size: 1rem;
+}
+
+.research-callout-box {
+  padding: 1.15rem 1.35rem;
+  border-left: 2px solid var(--color-ochre);
+  margin-top: 0.5rem;
+  background-color: var(--color-charcoal-surface);
+}
+
+.research-callout-title {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ochre);
+  margin-bottom: 0.35rem;
+}
+
+.research-callout-text {
+  font-size: 0.85rem;
+  color: #A8A196;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------
+   05 : EDUCATION SECTION (DEEP CHARCOAL)
+   ------------------------------------------------------------ */
+.education-editorial-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.edu-primary-panel {
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+.edu-inst-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ochre);
+  margin-bottom: 0.5rem;
+}
+
+.edu-degree-heading {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  color: var(--color-bone);
+  margin-bottom: 0.65rem;
+}
+
+.edu-meta-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #A8A196;
+  margin-bottom: 1.5rem;
+}
+
+.edu-meta-stats strong {
+  color: var(--color-bone);
+}
+
+.edu-courses-block {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-charcoal-border);
+}
+
+.edu-courses-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #A8A196;
+  margin-bottom: 0.85rem;
+}
+
+.edu-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.edu-course-item {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.65rem;
+  color: var(--color-bone);
+  background-color: var(--color-charcoal-deep);
+  border: 1px solid var(--color-charcoal-border);
+}
+
+.edu-secondary-panel {
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------------
+   06 : TECHNICAL TOOLKIT (WARM CREAM)
+   ------------------------------------------------------------ */
+.toolkit-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.toolkit-category-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolkit-cat-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ochre-dark);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(23, 23, 22, 0.08);
+}
+
+.toolkit-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.toolkit-tag-node {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  padding: 0.4rem 0.75rem;
+  color: var(--color-ink);
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-cream-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all var(--transition-fast);
+}
+
+.toolkit-tag-node:hover {
+  border-color: var(--color-ochre-dark);
+  color: var(--color-ochre-dark);
+}
+
+/* ------------------------------------------------------------
+   07 : LEADERSHIP & INVOLVEMENT (DEEP CHARCOAL CANVAS)
+   ------------------------------------------------------------ */
+.leadership-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.leadership-box {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-charcoal-surface);
+  border: 1px solid var(--color-charcoal-border);
+}
+
+.leadership-time-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-ochre);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.leadership-head-role {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-bone);
+  margin-bottom: 0.2rem;
+}
+
+.leadership-inst-label {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #C8C2B6;
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--color-charcoal-border);
+}
+
+.leadership-items-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.leadership-items-list li {
+  font-size: 0.875rem;
+  color: #C8C2B6;
+  position: relative;
+  padding-left: 1.15rem;
+  line-height: 1.5;
+}
+
+.leadership-items-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-ochre);
+}
+
+/* ------------------------------------------------------------
+   08 : PROFESSIONAL REGISTRATION (COMPACT PEC)
+   ------------------------------------------------------------ */
+.pec-registration-module {
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.pec-details-cluster {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.pec-badge-symbol {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-cream-border);
+  padding: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.pec-badge-symbol img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.pec-meta-typography {
+  display: flex;
+  flex-direction: column;
+}
+
+.pec-main-heading {
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 0.2rem;
+}
+
+.pec-council-text {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-ink-muted);
+}
+
+/* ------------------------------------------------------------
+   09 : CONTACT SECTION (DEEP CHARCOAL) - TIGHT VISUAL BALANCE
+   ------------------------------------------------------------ */
+.contact-editorial-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.contact-left-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-open-statement {
+  font-size: 1.05rem;
+  color: #C8C2B6;
+  line-height: 1.6;
+}
+
+.contact-links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.contact-link-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #C8C2B6;
+}
+
+.contact-link-row svg {
+  color: var(--color-ochre);
+  flex-shrink: 0;
+}
+
+.contact-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.contact-form-panel {
+  padding: 1.35rem 1.5rem;
+  background-color: var(--color-charcoal-surface);
+  border: 1px solid var(--color-charcoal-border);
+}
+
+.contact-editorial-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.form-control-unit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-control-unit label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #A8A196;
+}
+
+.form-control-unit input,
+.form-control-unit select,
+.form-control-unit textarea {
+  width: 100%;
+  background-color: var(--color-charcoal-deep);
+  border: 1px solid var(--color-charcoal-border);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.form-control-unit input:focus,
+.form-control-unit select:focus,
+.form-control-unit textarea:focus {
+  outline: none;
+  border-color: var(--color-ochre);
+  background-color: #242422;
+}
+
+.form-control-unit textarea {
+  min-height: 65px;
+  height: 65px;
+  resize: vertical;
+}
+
+.form-disclaimer-text {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #7E786E;
+  margin-top: -0.25rem;
+}
+
+/* ------------------------------------------------------------
+   Minimal Editorial Footer
+   ------------------------------------------------------------ */
+.site-footer-colophon {
+  padding: 2.5rem 0;
+  background-color: var(--color-charcoal-deep);
+  border-top: 1px solid var(--color-charcoal-border);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #8E887E;
+}
+
+.footer-flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-brand-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.footer-brand-title strong {
+  color: var(--color-bone);
+  font-size: 0.875rem;
+}
+
+.footer-quick-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+/* ------------------------------------------------------------
+   Responsive Breakpoints
+   ------------------------------------------------------------ */
+@media (max-width: 960px) {
+  .hero-editorial-grid,
+  .about-asymmetric-grid,
+  .education-editorial-layout,
+  .contact-editorial-split {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-timeline-track::before {
+    left: 0;
+  }
+
+  .timeline-card-entry {
+    grid-template-columns: 1fr;
+    padding-left: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .timeline-date-col::after {
+    left: -1.85rem;
+    right: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    left: 0;
+  }
+
+  .side-rail {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--color-charcoal-base);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-base);
+    border-bottom: 1px solid var(--color-charcoal-border);
+    color: var(--color-bone) !important;
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+  }
+}
